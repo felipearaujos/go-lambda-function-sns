@@ -1,1 +1,5 @@
 # go-lambda-function-sns
+
+In this example, the MyEvent struct represents the payload of the SNS message, which includes the name of the source S3 bucket (Bucket) and the key (file name) of the object to be copied (Key). The handler function uses the AWS SDK for Go to copy the object from the source bucket to the destination bucket. The CopyObjectInput object specifies the source bucket, the key of the object to be copied, the destination bucket, and the key of the new object in the destination bucket.
+
+To deploy this function as a Lambda function, you can compile it into a binary and then create a new Lambda function using the AWS CLI or the AWS Management Console. You will also need to create an SNS topic and subscribe the Lambda function to the topic to receive events. Additionally, you will need to grant the Lambda function permission to read from the source bucket and write to the destination bucket using an IAM role.
